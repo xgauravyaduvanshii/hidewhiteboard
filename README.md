@@ -1,131 +1,236 @@
-<a href="https://github.com/xgauravyaduvanshii/hidewhiteboard" target="_blank" rel="noopener">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://hidewhiteboard.nyc3.cdn.digitaloceanspaces.com/github/hidewhiteboard_github_cover_2_dark.png"
-    />
-    <img
-      alt="HideWhiteboard"
-      src="https://hidewhiteboard.nyc3.cdn.digitaloceanspaces.com/github/hidewhiteboard_github_cover_2.png"
-    />
-  </picture>
-</a>
+<p align="center">
+  <a href="https://github.com/xgauravyaduvanshii">
+    <img src="https://avatars.githubusercontent.com/u/255689319?v=4" width="120" style="border-radius:50%" alt="flyingdarkkdev logo"/>
+  </a>
+</p>
 
-<h1 align="center">HideWhiteboard</h1>
+<h1 align="center">🚀 HideWhiteboard</h1>
 
 <p align="center">
-  Open-source whiteboard monorepo for collaborative, hand-drawn style diagramming.<br />
-  Built around the <code>@hidewhiteboard/hidewhiteboard</code> editor package.
+  <b>Next-Generation AI-Powered Open Whiteboard Platform</b><br/>
+  Infinite Canvas • Hand-Drawn Feel • Real-Time Collaboration • AI Enhanced
 </p>
 
 <p align="center">
-  <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-2563eb.svg" /></a>
-  <a href="https://www.npmjs.com/package/@hidewhiteboard/hidewhiteboard"><img alt="npm" src="https://img.shields.io/npm/v/@hidewhiteboard/hidewhiteboard" /></a>
-  <img alt="Node >= 18" src="https://img.shields.io/badge/node-%3E%3D18-16a34a" />
-  <img alt="Yarn 1.x" src="https://img.shields.io/badge/yarn-1.x-0ea5e9" />
-  <a href="https://github.com/xgauravyaduvanshii/hidewhiteboard/issues"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
+  <a href="https://github.com/xgauravyaduvanshii/hidewhiteboard/stargazers">
+    <img src="https://img.shields.io/github/stars/xgauravyaduvanshii/hidewhiteboard?style=for-the-badge&color=yellow"/>
+  </a>
+  <a href="https://github.com/xgauravyaduvanshii/hidewhiteboard/network/members">
+    <img src="https://img.shields.io/github/forks/xgauravyaduvanshii/hidewhiteboard?style=for-the-badge&color=blue"/>
+  </a>
+  <img src="https://img.shields.io/badge/Open%20Source-MIT-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/AI-Enabled-purple?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Node-%3E%3D18-green?style=for-the-badge"/>
 </p>
 
-## Excalidraw Showcase
+---
 
-This project follows the same hand-drawn canvas philosophy and interaction model popularized by Excalidraw.
+# ✨ What is HideWhiteboard?
+
+HideWhiteboard is not just a canvas.
+
+It’s a **creative battlefield for ideas**.  
+A space where diagrams breathe, logic flows, and AI assists your imagination.
+
+Inspired by the interaction elegance of Excalidraw — but rebuilt with:
+
+- ⚡ Modular monorepo architecture  
+- 🧠 AI-enhanced workflows  
+- 🤝 Real-time collaboration core  
+- 🎨 Signature hand-drawn aesthetic  
+- 🧩 Extensible package system  
+
+---
+
+# 🎥 Live Preview
 
 <p align="center">
-  <img
-    src="https://hidewhiteboard.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png"
-    alt="HideWhiteboard scene created in Excalidraw style"
-  />
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="85%" alt="whiteboard gif demo"/>
 </p>
 
-## Why HideWhiteboard
+---
 
-- Infinite whiteboard canvas with a hand-drawn visual style.
-- Real-time collaboration architecture in `hidewhiteboard-app/`.
-- Reusable packages for editor, elements, math, and utilities.
-- Import/export flows for images, JSON scenes, and library content.
-- Developer docs powered by Docusaurus in `dev-docs/`.
+# 🧠 AI-Powered Features
 
-## Open Source First
+> Intelligence meets creativity.
 
-- License: **MIT**.
-- Contributions are welcome from the community.
-- Issues, feature requests, and PRs are encouraged.
+- 🤖 **AI Diagram Generation**
+- ✍️ Smart shape correction
+- 🪄 Auto-layout assistance
+- 📊 AI-based structure suggestions
+- 📝 Natural language → visual diagram
+- 🔍 Smart object detection
+- 📦 AI export optimization
 
-## Quick Links
+---
 
-- App: `hidewhiteboard-app/`
-- Main package: `packages/hidewhiteboard/`
-- Monorepo docs: `dev-docs/README.md`
-- Docs content map: `dev-docs/docs/README.md`
-- Examples: `examples/`
+# 🌌 Core Features
 
-## Monorepo Structure
+| Capability | Description |
+|------------|-------------|
+| 🖊 Infinite Canvas | Unlimited creative space |
+| 🎨 Hand-Drawn Style | Organic sketch rendering |
+| 🔄 Undo / Redo Engine | Non-destructive editing |
+| 📤 Export Options | PNG, JSON, Scene Library |
+| 📥 Import Support | External scenes & assets |
+| 🤝 Real-Time Sync | Multi-user collaboration |
+| 🧩 Modular Packages | Fully scalable architecture |
+| 🧠 AI Assist | Smart enhancement layer |
 
-```text
-hidewhiteboardfork/
-├── hidewhiteboard-app/        # Web app (collab + product shell)
+---
+
+# 🏗 Monorepo Architecture
+
+```
+hidewhiteboard/
+├── hidewhiteboard-app/
 ├── packages/
-│   ├── common/                # Shared helpers/constants
-│   ├── element/               # Element models and scene logic
-│   ├── hidewhiteboard/        # Core React editor package
-│   ├── math/                  # Geometry/math utilities
-│   └── utils/                 # Export and utility helpers
-├── dev-docs/                  # Docusaurus documentation site
-└── examples/                  # Integration examples
+│   ├── hidewhiteboard/
+│   ├── element/
+│   ├── math/
+│   ├── utils/
+│   └── common/
+├── dev-docs/
+└── examples/
 ```
 
-## Getting Started
+Built with clean separation of concerns and long-term scalability in mind.
 
-### Prerequisites
+---
 
-- Node.js `>=18`
-- Yarn `1.22.x`
+# ⚡ Quick Start
 
-### Install and Run
+## 📦 Requirements
+
+- Node.js >= 18
+- Yarn 1.22.x
+
+## 🔧 Install
 
 ```bash
 yarn install
+```
+
+## ▶ Start Development
+
+```bash
 yarn start
 ```
 
-Starts the app from `hidewhiteboard-app` in development mode.
+---
 
-## Developer Workflow
-
-```bash
-# Build app
-yarn build
-
-# Build all internal packages
-yarn build:packages
-
-# Full validation
-yarn test:all
-
-# Individual checks
-yarn test:typecheck
-yarn test:code
-yarn test:app
-
-# Auto-fix style/lint
-yarn fix
-```
-
-## Use as an npm Package
+# 📦 Install as npm Package
 
 ```bash
 npm install react react-dom @hidewhiteboard/hidewhiteboard
-# or
-yarn add react react-dom @hidewhiteboard/hidewhiteboard
 ```
 
-## Contributing
+---
 
-1. Fork and create a feature branch.
-2. Add code changes with tests/docs updates.
-3. Run `yarn test:all`.
-4. Open a PR with a clear summary.
+# 🧪 Developer Commands
 
-## License
+```bash
+yarn build
+yarn build:packages
+yarn test:all
+yarn test:typecheck
+yarn fix
+```
 
-MIT
+---
+
+# 🌠 Vision
+
+HideWhiteboard aims to become:
+
+- The open alternative to commercial whiteboard tools  
+- A programmable canvas engine  
+- A collaborative thinking platform  
+- A foundation for AI-assisted creativity  
+
+---
+
+# 🛣 Roadmap
+
+- [x] Core drawing engine
+- [x] Monorepo structure
+- [x] Real-time architecture
+- [x] AI integration foundation
+- [x] Plugin ecosystem
+- [x] Cloud workspace
+- [x] Mobile optimization
+- [ ] Team dashboards
+- [x] Public templates marketplace
+
+---
+
+# 👨‍💻 Creator
+
+### flyingdarkkdev
+
+> Vision-driven open-source builder  
+> System architect • AI enthusiast • Creative engineer  
+
+🔗 GitHub: https://github.com/xgauravyaduvanshii  
+🌌 Project: HideWhiteboard  
+
+Passionate about building scalable open ecosystems with intelligent interfaces.
+
+---
+
+# 🌍 Open Source First
+
+HideWhiteboard is:
+
+- 🟢 Fully Open Source  
+- 📜 MIT Licensed  
+- 🤝 Community Driven  
+- 🚀 Built for contribution  
+
+We welcome:
+
+- Feature PRs  
+- Bug fixes  
+- Performance improvements  
+- Documentation upgrades  
+
+---
+
+# 💖 Support The Project
+
+If this project inspires you:
+
+⭐ Star the repository  
+🍴 Fork and experiment  
+📢 Share with developers  
+🛠 Contribute improvements  
+
+---
+
+# 🧬 Future Expansion
+
+- AI design assistant mode  
+- Enterprise collaboration layer  
+- Cloud-native persistence  
+- Browser-native P2P sync  
+- AI whiteboard copilots  
+
+---
+
+# 🏁 Final Statement
+
+HideWhiteboard is more than a tool.
+
+It’s an evolving creative engine —  
+built to empower thinkers, builders, and innovators.
+
+---
+
+---
+Inspired by Excalidraw’s hand-drawn canvas experience; HideWhiteboard is an independent project with no affiliation and respects all intellectual property and privacy standards.
+
+---
+
+<p align="center">
+  Made with ❤️ by flyingdarkkdev
+</p>
