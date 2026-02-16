@@ -1,0 +1,75 @@
+@use "../css/variables.module" as *;
+
+.hidewhiteboard {
+  .Dialog {
+    user-select: text;
+    cursor: auto;
+    overflow: hidden;
+  }
+
+  .Dialog__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(132, 140, 190, 0.24);
+    padding: 0 0 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+
+  .Dialog__titleContent {
+    overflow-wrap: anywhere;
+  }
+
+  .Dialog__close {
+    color: var(--color-gray-40);
+    margin: 0;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    border: 0;
+    background-color: transparent;
+    line-height: 0;
+    cursor: pointer;
+    border-radius: 999px;
+    transition:
+      color 0.14s ease,
+      background-color 0.14s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--color-gray-60);
+    }
+    &:active {
+      color: var(--color-gray-40);
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    & + .Dialog__content {
+      --offset: 28px;
+      height: calc(100% - var(--offset)) !important;
+      margin-top: var(--offset) !important;
+    }
+  }
+
+  &.theme--light {
+    .Dialog__title {
+      border-bottom-color: rgba(73, 86, 156, 0.2);
+    }
+  }
+
+  .Dialog--fullscreen {
+    .Dialog__close {
+      top: 1.25rem;
+      right: 1.25rem;
+    }
+  }
+}

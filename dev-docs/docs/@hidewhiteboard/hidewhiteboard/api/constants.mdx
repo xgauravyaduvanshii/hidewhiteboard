@@ -1,0 +1,46 @@
+# Constants
+
+### FONT_FAMILY
+
+**How to use**
+
+```js
+import { FONT_FAMILY } from "@hidewhiteboard/hidewhiteboard";
+```
+
+`FONT_FAMILY` contains all the font families used in `hidewhiteboard`. The default families are the following:
+
+| Font Family | Description            |
+| ----------- | ---------------------- |
+| `Excalifont`    | The `Hand-drawn` font |
+| `Nunito` | The `Normal` Font      |
+| `Comic Shanns`  | The `Code` Font        |
+
+Pre-selected family is `FONT_FAMILY.Excalifont`, unless it's overriden with `initialData.appState.currentItemFontFamily`.
+
+### THEME
+
+**How to use**
+
+```js
+import { THEME } from "@hidewhiteboard/hidewhiteboard";
+```
+
+`THEME` contains all the themes supported by `hidewhiteboard` as explained below
+
+| Theme   | Description       |
+| ------- | ----------------- |
+| `LIGHT` | The `light` theme |
+| `DARK`  | The `Dark` theme  |
+
+Defaults to `THEME.LIGHT` unless passed in `initialData.appState.theme`
+
+### MIME_TYPES
+
+[`MIME_TYPES`](https://github.com/xgauravyaduvanshii/hidewhiteboard/blob/master/packages/hidewhiteboard/constants.ts#L101) contains all the mime types supported by `hidewhiteboard`.
+
+**How to use **
+
+```js
+import { MIME_TYPES } from "@hidewhiteboard/hidewhiteboard";
+```

@@ -1,0 +1,16 @@
+[
+  {
+    "path": "dist/hidewhiteboard.production.min.js",
+    "limit": "340 kB"
+  },
+  {
+    "path": "dist/hidewhiteboard-assets/locales",
+    "name": "dist/hidewhiteboard-assets/locales",
+    "limit": "290 kB"
+  },
+  {
+    "path": "dist/hidewhiteboard-assets/vendor-*.js",
+    "name": "dist/hidewhiteboard-assets/vendor*.js",
+    "limit": "900 kB"
+  }
+]

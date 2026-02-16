@@ -1,0 +1,21 @@
+{
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}"],
+      "rules": {
+        "@typescript-eslint/no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["../../hidewhiteboard", "../../../packages/hidewhiteboard", "@hidewhiteboard/hidewhiteboard"],
+                "message": "Do not import from '@hidewhiteboard/hidewhiteboard' package anything but types, as this package must be independent.",
+                "allowTypeImports": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

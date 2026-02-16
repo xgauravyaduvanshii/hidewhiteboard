@@ -1,0 +1,42 @@
+# Installation
+
+`@hidewhiteboard/mermaid-to-hidewhiteboard` is published to npm. This library is used in [hidewhiteboard](https://github.com/xgauravyaduvanshii/hidewhiteboard) to transform mermaid syntax to hidewhiteboard diagrams.
+
+Using `npm`
+
+```bash
+npm install @hidewhiteboard/mermaid-to-hidewhiteboard
+```
+
+Using `yarn`
+
+```bash
+yarn add @hidewhiteboard/mermaid-to-hidewhiteboard
+```
+
+## Usage
+
+Once the library is installed, its ready to use.
+
+```js
+import { parseMermaidTohidewhiteboard } from "@hidewhiteboard/mermaid-to-hidewhiteboard";
+import { convertTohidewhiteboardElements}  from "@hidewhiteboard/hidewhiteboard"
+
+try {
+  const { elements, files } = await parseMermaid(diagramDefinition, {
+    fontSize: DEFAULT_FONT_SIZE,
+  });
+  // currently the elements returned from the parser are in a "skeleton" format
+  // which we need to convert to fully qualified hidewhiteboard elements first
+  const hidewhiteboardElements = convertTohidewhiteboardElements(elements);
+
+  // Render elements and files on hidewhiteboard
+} catch (e) {
+  // Error handling
+}
+```
+
+## Playground
+
+ Try it out [here](https://mermaid-to-hidewhiteboard.vercel.app)
+

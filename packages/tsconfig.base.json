@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@hidewhiteboard/common": ["./common/src/index.ts"],
+      "@hidewhiteboard/common/*": ["./common/src/*"],
+      "@hidewhiteboard/element": ["./element/src/index.ts"],
+      "@hidewhiteboard/element/*": ["./element/src/*"],
+      "@hidewhiteboard/hidewhiteboard": ["./hidewhiteboard/index.tsx"],
+      "@hidewhiteboard/hidewhiteboard/*": ["./hidewhiteboard/*"],
+      "@hidewhiteboard/math": ["./math/src/index.ts"],
+      "@hidewhiteboard/math/*": ["./math/src/*"],
+      "@hidewhiteboard/utils": ["./utils/src/index.ts"],
+      "@hidewhiteboard/utils/*": ["./utils/src/*"]
+    }
+  }
+}

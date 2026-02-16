@@ -1,0 +1,60 @@
+.hidewhiteboard {
+  .llm-settings-dialog__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .llm-settings-dialog__label {
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .llm-settings-dialog__input {
+    width: 100%;
+    border: 1px solid var(--default-border-color);
+    background: var(--default-bg-color);
+    color: inherit;
+    border-radius: 0.65rem;
+    height: 2.3rem;
+    padding: 0 0.7rem;
+    outline: none;
+    font-size: 0.88rem;
+  }
+
+  .llm-settings-dialog__input:focus {
+    border-color: var(--color-primary);
+  }
+
+  .llm-settings-dialog__hint {
+    font-size: 0.77rem;
+    line-height: 1.45;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .llm-settings-dialog__hint a {
+    color: var(--color-primary);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .llm-settings-dialog__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.2rem;
+  }
+
+  .llm-settings-dialog__clear {
+    border: 1px solid var(--default-border-color);
+    background: transparent;
+    color: inherit;
+    border-radius: 0.55rem;
+    height: 2rem;
+    padding: 0 0.8rem;
+    cursor: pointer;
+  }
+}

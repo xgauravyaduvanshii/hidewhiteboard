@@ -1,0 +1,168 @@
+@use "../css/variables.module" as *;
+
+.hidewhiteboard {
+  &.hidewhiteboard-modal-container {
+    position: absolute;
+    z-index: var(--zIndex-modal);
+  }
+
+  .Modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: clamp(0.75rem, 2vw, 2rem);
+    flex-direction: column;
+
+    .Island {
+      padding: clamp(1rem, 2vw, 2rem);
+      border: 0;
+      box-shadow: none;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    &.animations-disabled {
+      .Modal__background {
+        animation: none;
+      }
+
+      .Modal__content {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  .Modal__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background:
+      radial-gradient(
+        1100px 520px at 50% -8%,
+        rgba(95, 103, 180, 0.2) 0%,
+        rgba(95, 103, 180, 0) 72%
+      ),
+      rgba(8, 10, 18, 0.62);
+    backdrop-filter: blur(2px);
+
+    animation: Modal__background__fade-in 0.14s linear forwards;
+  }
+
+  .Modal__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-width);
+    max-height: 100%;
+
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+    animation: Modal__content_fade-in 0.14s ease-out 0s forwards;
+
+    position: relative;
+    overflow-y: auto;
+
+    background: linear-gradient(
+      180deg,
+      var(--color-surface-low) 0%,
+      var(--island-bg-color) 100%
+    );
+
+    border: 1px solid var(--color-surface-high);
+    box-shadow: 0 26px 72px rgba(0, 0, 0, 0.32);
+    border-radius: 1rem;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.theme--dark {
+    .Modal__content {
+      background: linear-gradient(180deg, #25283d 0%, #1d1f30 100%);
+      border-color: rgba(150, 160, 210, 0.26);
+      box-shadow:
+        0 28px 72px rgba(0, 0, 0, 0.62),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+  }
+
+  @keyframes Modal__background__fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes Modal__content_fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .Modal__close {
+    color: var(--icon-fill-color);
+    margin: 0;
+    padding: 0.45rem;
+    position: absolute;
+    top: 0.875rem;
+    right: 0.875rem;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    line-height: 0;
+    cursor: pointer;
+    transition:
+      transform 0.14s ease,
+      background-color 0.14s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.14);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  .Dialog--fullscreen {
+    .Modal {
+      padding: 0;
+    }
+
+    .Modal__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 100%;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}

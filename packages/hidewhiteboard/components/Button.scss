@@ -1,0 +1,7 @@
+@use "../css/theme" as *;
+
+.hidewhiteboard {
+  .hidewhiteboard-button {
+    @include outlineButtonStyles;
+  }
+}

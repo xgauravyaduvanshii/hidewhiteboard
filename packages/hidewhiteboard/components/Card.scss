@@ -1,0 +1,96 @@
+@use "../css/variables.module.scss" as *;
+
+.hidewhiteboard {
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    max-width: 310px;
+    min-height: 350px;
+
+    margin: 0.5rem;
+    padding: 1.25rem 1rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(130, 140, 188, 0.24);
+    background: linear-gradient(
+      180deg,
+      rgba(37, 39, 60, 0.92) 0%,
+      rgba(28, 29, 45, 0.94) 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+    text-align: center;
+
+    h2 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.9rem;
+      line-height: 1.06;
+      letter-spacing: 0.01em;
+    }
+
+    .Card-icon {
+      font-size: 2.6em;
+      display: flex;
+      flex: 0 0 auto;
+      padding: 1rem;
+      border-radius: 50%;
+      background: var(--card-color);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+
+      svg {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
+
+    .Card-details {
+      font-size: 1rem;
+      line-height: 1.45;
+      min-height: 102px;
+      padding: 0 0.5rem;
+      margin-bottom: auto;
+      color: var(--color-gray-20);
+    }
+
+    & .Card-button.ToolIcon_type_button {
+      height: 2.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.2rem;
+      background-color: var(--card-color);
+      min-width: 9rem;
+      border-radius: 0.65rem;
+
+      &:hover {
+        background-color: var(--card-color-darker);
+      }
+      &:active {
+        background-color: var(--card-color-darkest);
+      }
+      .ToolIcon__label {
+        color: #fff;
+      }
+
+      .Spinner {
+        --spinner-color: #fff;
+      }
+    }
+  }
+
+  &.theme--light {
+    .Card {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f7ff 100%);
+      border-color: rgba(96, 112, 188, 0.24);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.72),
+        0 10px 24px rgba(35, 55, 110, 0.08);
+
+      .Card-details {
+        color: var(--color-gray-60);
+      }
+    }
+  }
+}
